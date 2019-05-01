@@ -16,6 +16,16 @@
 		FAE55C3922796A5B0029A437 /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C3722796A5B0029A437 /* MovieViewCell.swift */; };
 		FAE55C3A22796A5B0029A437 /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE55C3822796A5B0029A437 /* MovieViewCell.xib */; };
 		FAE55C3C22796EFC0029A437 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C3B22796EFC0029A437 /* Movie.swift */; };
+		FAE55C4D227972700029A437 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C40227972700029A437 /* ParameterEncoding.swift */; };
+		FAE55C4E227972700029A437 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C41227972700029A437 /* URLParameterEncoding.swift */; };
+		FAE55C4F227972700029A437 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C42227972700029A437 /* JSONParameterEncoder.swift */; };
+		FAE55C50227972700029A437 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C44227972700029A437 /* NetworkManager.swift */; };
+		FAE55C51227972700029A437 /* TMDbAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C46227972700029A437 /* TMDbAPIEndPoint.swift */; };
+		FAE55C52227972700029A437 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C48227972700029A437 /* HTTPTask.swift */; };
+		FAE55C53227972700029A437 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C49227972700029A437 /* HTTPMethod.swift */; };
+		FAE55C54227972700029A437 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C4A227972700029A437 /* Router.swift */; };
+		FAE55C55227972700029A437 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C4B227972700029A437 /* NetworkLogger.swift */; };
+		FAE55C56227972700029A437 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C4C227972700029A437 /* EndPointType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +52,16 @@
 		FAE55C3722796A5B0029A437 /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
 		FAE55C3822796A5B0029A437 /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
 		FAE55C3B22796EFC0029A437 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		FAE55C40227972700029A437 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		FAE55C41227972700029A437 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		FAE55C42227972700029A437 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		FAE55C44227972700029A437 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FAE55C46227972700029A437 /* TMDbAPIEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDbAPIEndPoint.swift; sourceTree = "<group>"; };
+		FAE55C48227972700029A437 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		FAE55C49227972700029A437 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FAE55C4A227972700029A437 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FAE55C4B227972700029A437 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		FAE55C4C227972700029A437 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +103,7 @@
 		FAE55C13227963440029A437 /* Movie Search */ = {
 			isa = PBXGroup;
 			children = (
+				FAE55C3D2279724F0029A437 /* Service */,
 				FAE55C36227969E50029A437 /* Model */,
 				FAE55C35227969E20029A437 /* View */,
 				FAE55C34227969DF0029A437 /* ViewModel */,
@@ -127,6 +148,63 @@
 				FAE55C3B22796EFC0029A437 /* Movie.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FAE55C3D2279724F0029A437 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FAE55C3E227972700029A437 /* Networking */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FAE55C3E227972700029A437 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FAE55C3F227972700029A437 /* Encoding */,
+				FAE55C43227972700029A437 /* Manager */,
+				FAE55C45227972700029A437 /* EndPoint */,
+				FAE55C47227972700029A437 /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FAE55C3F227972700029A437 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				FAE55C40227972700029A437 /* ParameterEncoding.swift */,
+				FAE55C41227972700029A437 /* URLParameterEncoding.swift */,
+				FAE55C42227972700029A437 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		FAE55C43227972700029A437 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FAE55C44227972700029A437 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FAE55C45227972700029A437 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				FAE55C46227972700029A437 /* TMDbAPIEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		FAE55C47227972700029A437 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FAE55C48227972700029A437 /* HTTPTask.swift */,
+				FAE55C49227972700029A437 /* HTTPMethod.swift */,
+				FAE55C4A227972700029A437 /* Router.swift */,
+				FAE55C4B227972700029A437 /* NetworkLogger.swift */,
+				FAE55C4C227972700029A437 /* EndPointType.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +311,17 @@
 			files = (
 				FAE55C17227963440029A437 /* MovieSearchViewController.swift in Sources */,
 				FAE55C15227963440029A437 /* AppDelegate.swift in Sources */,
+				FAE55C4D227972700029A437 /* ParameterEncoding.swift in Sources */,
+				FAE55C53227972700029A437 /* HTTPMethod.swift in Sources */,
+				FAE55C54227972700029A437 /* Router.swift in Sources */,
+				FAE55C55227972700029A437 /* NetworkLogger.swift in Sources */,
+				FAE55C56227972700029A437 /* EndPointType.swift in Sources */,
 				FAE55C3C22796EFC0029A437 /* Movie.swift in Sources */,
+				FAE55C51227972700029A437 /* TMDbAPIEndPoint.swift in Sources */,
+				FAE55C50227972700029A437 /* NetworkManager.swift in Sources */,
+				FAE55C52227972700029A437 /* HTTPTask.swift in Sources */,
+				FAE55C4E227972700029A437 /* URLParameterEncoding.swift in Sources */,
+				FAE55C4F227972700029A437 /* JSONParameterEncoder.swift in Sources */,
 				FAE55C3922796A5B0029A437 /* MovieViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
