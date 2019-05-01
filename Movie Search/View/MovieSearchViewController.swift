@@ -9,6 +9,13 @@
 import UIKit
 
 class MovieSearchViewController: UIViewController {
+    
+    @IBOutlet private var searchBar: UISearchBar!
+    @IBOutlet private var movieTableView: UITableView!
+    @IBOutlet private var loadingView: UIActivityIndicatorView!
+    @IBOutlet private var statusView: UIView!
+    @IBOutlet private var statusViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var statusLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

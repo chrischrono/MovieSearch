@@ -13,6 +13,8 @@
 		FAE55C1C227963460029A437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE55C1B227963460029A437 /* Assets.xcassets */; };
 		FAE55C1F227963460029A437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE55C1D227963460029A437 /* LaunchScreen.storyboard */; };
 		FAE55C2A227963460029A437 /* Movie_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C29227963460029A437 /* Movie_SearchTests.swift */; };
+		FAE55C3922796A5B0029A437 /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C3722796A5B0029A437 /* MovieViewCell.swift */; };
+		FAE55C3A22796A5B0029A437 /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE55C3822796A5B0029A437 /* MovieViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		FAE55C25227963460029A437 /* Movie SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie SearchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE55C29227963460029A437 /* Movie_SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_SearchTests.swift; sourceTree = "<group>"; };
 		FAE55C2B227963460029A437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE55C3722796A5B0029A437 /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
+		FAE55C3822796A5B0029A437 /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				FAE55C16227963440029A437 /* MovieSearchViewController.swift */,
+				FAE55C3722796A5B0029A437 /* MovieViewCell.swift */,
+				FAE55C3822796A5B0029A437 /* MovieViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE55C1F227963460029A437 /* LaunchScreen.storyboard in Resources */,
+				FAE55C3A22796A5B0029A437 /* MovieViewCell.xib in Resources */,
 				FAE55C1C227963460029A437 /* Assets.xcassets in Resources */,
 				FAE55C1A227963440029A437 /* Main.storyboard in Resources */,
 			);
@@ -223,6 +230,7 @@
 			files = (
 				FAE55C17227963440029A437 /* MovieSearchViewController.swift in Sources */,
 				FAE55C15227963440029A437 /* AppDelegate.swift in Sources */,
+				FAE55C3922796A5B0029A437 /* MovieViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -88,7 +88,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loadingView" destination="bSG-Zk-nTB" id="zSa-zG-AdX"/>
+                        <outlet property="movieTableView" destination="bTv-hl-DWi" id="lGR-Pw-eo6"/>
+                        <outlet property="searchBar" destination="inr-k8-RyX" id="KfJ-D5-FHl"/>
                         <outlet property="searchDisplayController" destination="gDW-9y-xca" id="8hx-8U-6K3"/>
+                        <outlet property="statusLabel" destination="Kio-du-ZrK" id="ODl-kk-AUq"/>
+                        <outlet property="statusView" destination="ojl-JA-1qw" id="r1l-Hv-vMG"/>
+                        <outlet property="statusViewBottomConstraint" destination="cTL-XA-z3Z" id="nNK-93-F6b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
