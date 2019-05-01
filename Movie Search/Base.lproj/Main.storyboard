@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Movie Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MovieSearchViewController" customModule="Movie_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWf-dD-AiG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwitterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="99s-Eg-qC2">
+                                        <rect key="frame" x="177" y="0.0" width="60" height="60"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13478702309999999" green="0.62677407259999995" blue="0.94906026119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="99s-Eg-qC2" firstAttribute="height" secondItem="HWf-dD-AiG" secondAttribute="height" id="Jw5-PG-PS2"/>
+                                    <constraint firstItem="99s-Eg-qC2" firstAttribute="centerY" secondItem="HWf-dD-AiG" secondAttribute="centerY" id="M2V-KQ-Qo1"/>
+                                    <constraint firstItem="99s-Eg-qC2" firstAttribute="centerX" secondItem="HWf-dD-AiG" secondAttribute="centerX" id="Qm8-3W-Uyl"/>
+                                    <constraint firstItem="99s-Eg-qC2" firstAttribute="width" secondItem="HWf-dD-AiG" secondAttribute="height" id="p9F-b9-dOt"/>
+                                    <constraint firstAttribute="height" constant="60" id="vt0-Qt-uy9"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="inr-k8-RyX">
+                                <rect key="frame" x="0.0" y="104" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="WCp-3a-lEa"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bTv-hl-DWi">
+                                <rect key="frame" x="0.0" y="160" width="414" height="702"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bSG-Zk-nTB">
+                                <rect key="frame" x="189" y="430" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.13478702306747437" green="0.62677407264709473" blue="0.94906026124954224" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojl-JA-1qw">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kio-du-ZrK">
+                                        <rect key="frame" x="20" y="19.5" width="374" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Kio-du-ZrK" firstAttribute="centerX" secondItem="ojl-JA-1qw" secondAttribute="centerX" id="Kyg-T2-whH"/>
+                                    <constraint firstAttribute="height" constant="60" id="NIt-Lm-l4m"/>
+                                    <constraint firstItem="Kio-du-ZrK" firstAttribute="width" secondItem="ojl-JA-1qw" secondAttribute="width" constant="-40" id="Utx-N6-o23"/>
+                                    <constraint firstItem="Kio-du-ZrK" firstAttribute="centerY" secondItem="ojl-JA-1qw" secondAttribute="centerY" id="kyr-tQ-gum"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bTv-hl-DWi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A0V-vm-nDW"/>
+                            <constraint firstItem="bTv-hl-DWi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EdN-mP-vjM"/>
+                            <constraint firstItem="bTv-hl-DWi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Z3f-8i-BX9"/>
+                            <constraint firstItem="inr-k8-RyX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bsa-Kt-EDZ"/>
+                            <constraint firstItem="ojl-JA-1qw" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="cTL-XA-z3Z"/>
+                            <constraint firstItem="HWf-dD-AiG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="dYW-W2-ez1"/>
+                            <constraint firstItem="inr-k8-RyX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fSP-N9-E1S"/>
+                            <constraint firstItem="HWf-dD-AiG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fxi-zI-L80"/>
+                            <constraint firstItem="ojl-JA-1qw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hju-4T-ZXn"/>
+                            <constraint firstItem="inr-k8-RyX" firstAttribute="top" secondItem="HWf-dD-AiG" secondAttribute="bottom" id="i1A-Vy-CyJ"/>
+                            <constraint firstItem="HWf-dD-AiG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jeB-0y-syi"/>
+                            <constraint firstItem="ojl-JA-1qw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="kVG-ph-QzB"/>
+                            <constraint firstItem="bTv-hl-DWi" firstAttribute="top" secondItem="inr-k8-RyX" secondAttribute="bottom" id="vyQ-cd-tjX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="gDW-9y-xca" id="8hx-8U-6K3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="gDW-9y-xca">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="vut-fE-sap"/>
+                        <outlet property="searchBar" destination="inr-k8-RyX" id="4nC-XO-naB"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="u5D-F9-YDh"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="7jr-48-bxK"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="3aK-ei-hsm"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="TwitterIcon" width="200" height="200"/>
+    </resources>
 </document>

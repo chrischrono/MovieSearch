@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAE55C15227963440029A437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C14227963440029A437 /* AppDelegate.swift */; };
-		FAE55C17227963440029A437 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C16227963440029A437 /* ViewController.swift */; };
+		FAE55C17227963440029A437 /* MovieSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE55C16227963440029A437 /* MovieSearchViewController.swift */; };
 		FAE55C1A227963440029A437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE55C18227963440029A437 /* Main.storyboard */; };
 		FAE55C1C227963460029A437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE55C1B227963460029A437 /* Assets.xcassets */; };
 		FAE55C1F227963460029A437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE55C1D227963460029A437 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		FAE55C11227963440029A437 /* Movie Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE55C14227963440029A437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAE55C16227963440029A437 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAE55C16227963440029A437 /* MovieSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewController.swift; sourceTree = "<group>"; };
 		FAE55C19227963440029A437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAE55C1B227963460029A437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAE55C1E227963460029A437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,8 +77,10 @@
 		FAE55C13227963440029A437 /* Movie Search */ = {
 			isa = PBXGroup;
 			children = (
+				FAE55C36227969E50029A437 /* Model */,
+				FAE55C35227969E20029A437 /* View */,
+				FAE55C34227969DF0029A437 /* ViewModel */,
 				FAE55C14227963440029A437 /* AppDelegate.swift */,
-				FAE55C16227963440029A437 /* ViewController.swift */,
 				FAE55C18227963440029A437 /* Main.storyboard */,
 				FAE55C1B227963460029A437 /* Assets.xcassets */,
 				FAE55C1D227963460029A437 /* LaunchScreen.storyboard */,
@@ -94,6 +96,28 @@
 				FAE55C2B227963460029A437 /* Info.plist */,
 			);
 			path = "Movie SearchTests";
+			sourceTree = "<group>";
+		};
+		FAE55C34227969DF0029A437 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAE55C35227969E20029A437 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAE55C16227963440029A437 /* MovieSearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAE55C36227969E50029A437 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAE55C17227963440029A437 /* ViewController.swift in Sources */,
+				FAE55C17227963440029A437 /* MovieSearchViewController.swift in Sources */,
 				FAE55C15227963440029A437 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

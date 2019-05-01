@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MovieSearchViewController.swift
 //  Movie Search
 //
 //  Created by Christian on 01/05/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MovieSearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
