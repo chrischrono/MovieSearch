@@ -50,7 +50,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="descriptionLabel" destination="EuC-og-sWY" id="g4v-yj-c7l"/>
+                <outlet property="overviewLabel" destination="EuC-og-sWY" id="g4v-yj-c7l"/>
                 <outlet property="posterImageView" destination="uV9-Np-RRC" id="uuh-ca-Skd"/>
                 <outlet property="titleLabel" destination="QEG-s0-CUt" id="ybB-QN-amq"/>
             </connections>
