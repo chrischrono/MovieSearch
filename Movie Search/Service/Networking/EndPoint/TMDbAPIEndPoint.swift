@@ -9,6 +9,7 @@ import Foundation
 
 public enum TMDbAPI {
     case searchMovie(query: String, apiKey: String)
+    case getPosterImage(posterPath: String)
 }
 
 extension TMDbAPI: EndPointType {
@@ -32,6 +33,8 @@ extension TMDbAPI: EndPointType {
         switch self {
         case .searchMovie:
             return "search/movie"
+        case .getPosterImage(let posterPath):
+            return "https://image.tmdb.org/t/p/w600_and_h900_bestv2/\(posterPath)"
         }
     }
     
@@ -46,7 +49,9 @@ extension TMDbAPI: EndPointType {
             return .requestParameters(bodyParameters: nil,
                                       bodyEncoding: .urlEncoding ,
                                       urlParameters: ["query": query,
-                                                      "apiKey": apiKey])
+                                                      "api_key": apiKey])
+        case .getPosterImage:
+            return .externalRequest
         }
     }
     

@@ -34,18 +34,21 @@
                                     <constraint firstAttribute="height" constant="60" id="vt0-Qt-uy9"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="inr-k8-RyX">
+                            <searchBar contentMode="redraw" text="harry potter" placeholder="Search Movie" translatesAutoresizingMaskIntoConstraints="NO" id="inr-k8-RyX">
                                 <rect key="frame" x="0.0" y="104" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="WCp-3a-lEa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Avg-f7-q1n"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bTv-hl-DWi">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bTv-hl-DWi">
                                 <rect key="frame" x="0.0" y="160" width="414" height="702"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bvK-GG-oKN"/>
+                                </connections>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bSG-Zk-nTB">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bSG-Zk-nTB">
                                 <rect key="frame" x="189" y="430" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.13478702306747437" green="0.62677407264709473" blue="0.94906026124954224" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -101,7 +104,6 @@
                 <searchDisplayController id="gDW-9y-xca">
                     <connections>
                         <outlet property="delegate" destination="BYZ-38-t0r" id="vut-fE-sap"/>
-                        <outlet property="searchBar" destination="inr-k8-RyX" id="4nC-XO-naB"/>
                         <outlet property="searchContentsController" destination="BYZ-38-t0r" id="u5D-F9-YDh"/>
                         <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="7jr-48-bxK"/>
                         <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="3aK-ei-hsm"/>

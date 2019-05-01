@@ -26,18 +26,18 @@ struct MovieResponse: Decodable {
 struct Movie: Decodable {
     let id: Int
     let title: String
-    let originalTitle: String
-    let originalLanguange: String
+    let originalTitle: String?
+    let originalLanguange: String?
     let overview: String
     let video: Bool
     let voteCount: Int
     let voteAverage: Float
     let popularity: Float
-    let posterPath: String
-    let backdropPath: String
+    let posterPath: String?
+    let backdropPath: String?
     let genreIds: [Int]
     let adult: Bool
-    let releaseDate: String
+    let releaseDate: String?
     
     enum CodingKeys: String, CodingKey {
         case id

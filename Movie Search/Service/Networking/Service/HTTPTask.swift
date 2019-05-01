@@ -20,6 +20,8 @@ public enum HTTPTask {
         urlParameters: Parameters?,
         additionHeaders: HTTPHeaders?)
     
+    case externalRequest
+    
     // case download, upload...etc
 }
 

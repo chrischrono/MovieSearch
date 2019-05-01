@@ -16,6 +16,7 @@ public enum NetworkResponse:String {
     case unableToDecode = "network_unable_to_decode"
     case noResponseObject = "network_no_response_object"
     case noNetworkConnection = "no_network_connection"
+    case invalidExternalURL = "network_invalid_external_url"
 }
 
 public enum Result<String>{
@@ -93,7 +94,16 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
                                              bodyEncoding: bodyEncoding,
                                              urlParameters: urlParameters,
                                              request: &request)
+                
+            case .externalRequest:
+                guard let url = URL(string: route.path) else {
+                    fatalError(NetworkResponse.invalidExternalURL.rawValue)
+                }
+                request = URLRequest(url: url,
+                                     cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
+                                     timeoutInterval: 10.0)
             }
+            self.addAdditionalHeaders(route.headers, request: &request)
             return request
         } catch {
             throw error

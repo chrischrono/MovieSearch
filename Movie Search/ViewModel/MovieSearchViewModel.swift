@@ -69,7 +69,9 @@ extension MovieSearchViewModel {
     
     private func processMovieResponse(_ movieResponse: MovieResponse) {
         let movieCellViewModels = movieResponse.results.map { (movie) -> MovieCellViewModel in
-            return MovieCellViewModel(with: movie)
+            let model = MovieCellViewModel(with: movie)
+            model.networkManager = networkManager
+            return model
         }
         self.movieCellViewModels = movieCellViewModels
     }
